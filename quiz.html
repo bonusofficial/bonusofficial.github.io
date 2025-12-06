@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CE NEXTGEN#3 - Portfolio Project</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <section id="quiz" style="min-height: 100vh;">
+        <h1 class="text-center">?????</h1>
+        <a href="/index.html" style="color: white;">> กลับหน้าหลัก</a>
+        <div class="container">
+            <div style="margin-top: 8rem;">
+                <div id="output">
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <center>
+            Footer na ja. Make By <a style="color: skyblue;" href="https://github.com/bonusofficial">@bonusofficial💖
+                <span style="color: orange;">KMITL</span></a>
+        </center>
+    </footer>
+    <!-- <script src="/xxxx.js"></script> -->
+    <script>
+        const question = [{
+                question: "CE ย่อมาจากอะไร?",
+                answer: [{
+                        name: "Chinese Engineer",
+                    },
+                    {
+                        name: "Computer Engineer",
+                    },
+                    {
+                        name: "Cooking Engineer",
+                    },
+                    {
+                        name: "Code Engineer",
+                    },
+                ],
+                results: "Computer Engineer"
+            },
+            {
+                question: "ไก่กับไข่อะไรเกิดก่อนกัน",
+                answer: [{
+                        name: "ไข่",
+                    },
+                    {
+                        name: "ไก่",
+                    },
+                    {
+                        name: "ไส้",
+                    },
+                    {
+                        name: "ตัวอ่อน",
+                    },
+                ],
+                results: "ตัวอ่อน"
+            },
+            {
+                question: "ระหว่าง Dev กับ สเต็กอะไรอร่อยกว่ากัน?",
+                answer: [{
+                        name: "สเต็ก",
+                    },
+                    {
+                        name: "Dev",
+                    },
+                    {
+                        name: "ส้มตำ",
+                    },
+                    {
+                        name: "ข้าวผัด",
+                    },
+                ],
+                results: "Dev"
+            },
+            {
+                question: "อกหักต้องกินอะไร?",
+                answer: [{
+                        name: "ไก่",
+                    },
+                    {
+                        name: "อกไก่",
+                    },
+                    {
+                        name: "ไก่กรอบ",
+                    },
+                    {
+                        name: "หมูกรอบ",
+                    },
+                ],
+                results: "ไก่กรอบ"
+            }
+        ]
+        let output = document.getElementById("output");
+        console.log(question.length)
+
+        function renderQ(data, index) {
+            try {
+                if (index > 0) {
+                    document.getElementById("output").innerHTML = ``;
+                }
+                let h1 = document.createElement("h1")
+                h1.innerHTML = data.question;
+                output.appendChild(h1)
+                let btnCon = document.createElement('div');
+                data.answer.forEach(i => {
+                    btnCon.className = "ans-con"
+
+                    let btn = document.createElement("button");
+                    btn.className = "choose-btn";
+                    btn.innerText = i.name
+                    btn.setAttribute("onclick", `submit(${index}, '${i.name}')`)
+                    console.log(i)
+                    btnCon.appendChild(btn);
+                });
+                output.appendChild(btnCon)
+            } catch (e) {
+                window.location.href = "https://youtu.be/v0NDDoNRtQ8?si=7tmKdbJvYnBi6YgP&t=24";
+
+            }
+        }
+        let amount = 0;
+        renderQ(question[amount], amount)
+
+        function submit(index, ans) {
+            const Qdata = question[index];
+            if (ans != Qdata.results) {
+                alert(`ผิดจร้าตอบ '${Qdata.results}' คับบบบ😚😎`);
+                amount++;
+
+            } else {
+                alert("ว้าวๆๆๆถูกเฉยย ✅");
+                amount++;
+            }
+            renderQ(question[amount], amount)
+            // console.log(amount)
+        }
+    </script>
+    <!-- <script src="/xxxx.js"></script> -->
+</body>
+
+</html>

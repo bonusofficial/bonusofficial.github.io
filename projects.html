@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CE NEXTGEN#3 - Portfolio Project</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <section id="project" style="min-height: 100vh;">
+        <h1 class="text-center">My <span class="highlight">Profile</span></h1>
+        <a href="/index.html" style="color: white;margin-left: 40px;">> กลับหน้าหลัก</a>
+        <div class="container" id="p_container"  style="display: flex;gap: 10px;flex-wrap:wrap;justify-content: center;">
+        </div>
+    </section>
+    <footer>
+        <center>
+            Footer na ja. Make By <a style="color: skyblue;" href="https://github.com/bonusofficial">@bonusofficial💖
+                <span style="color: orange;">KMITL</span></a>
+        </center>
+    </footer>
+    <script>
+        // Project Section
+        const project = [{
+            name: "เทสๆ",
+            img: "https://placehold.co/500",
+            des: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias nihil veniam officiis provident neque officia accusamus tempora, esse reprehenderit expedita nesciunt quod",
+        },{
+            name: "เทสๆ",
+            img: "https://placehold.co/500",
+            des: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias nihil veniam officiis provident neque officia accusamus tempora, esse reprehenderit expedita nesciunt quod",
+        },{
+            name: "เทสๆ",
+            img: "https://placehold.co/500",
+            des: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias nihil veniam officiis provident neque officia accusamus tempora, esse reprehenderit expedita nesciunt quod",
+        }];
+        let pContainer = document.getElementById("p_container");
+        project.forEach(i => {
+            let row = document.createElement('div');
+            row.className = "rows"
+            // Rows Items
+            let rowItem = document.createElement("div");
+            rowItem.className = "rows-item-p";
+
+            let pCard = document.createElement("div");
+            pCard.className = "p-card";
+
+            let imgCon = document.createElement("div");
+            imgCon.className = "img_con";
+            let pImg = document.createElement("img");
+            pImg.setAttribute("src", i.img);
+            pImg.className = "p-card-h"
+            imgCon.appendChild(pImg)
+
+            let pContent = document.createElement("div")
+            pContent.className = "p-card-content";
+
+            let pTitle = document.createElement("h3");
+            pTitle.innerHTML = i.name
+
+            let hr = document.createElement("hr")
+            hr.className = "c-hr"
+
+            let des = document.createElement('p');
+            des.innerHTML = i.des
+
+            // Content
+            pContent.appendChild(pTitle);
+            pContent.appendChild(hr);
+            pContent.appendChild(des);
+
+            pCard.appendChild(imgCon);
+            pCard.appendChild(pContent);
+
+            rowItem.appendChild(pCard);
+            row.appendChild(rowItem)
+
+
+            pContainer.appendChild(row)
+        })
+    </script>
+</body>
+
+</html>

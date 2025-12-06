@@ -3,11 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CE NEXTGEN#3 - Portfolio Project</title>
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <h1>Hello form <b>Bonus</b> CENextgen3</h1>
+    <section id="fist">
+        <center>
+            <h1 class="title">My <span class="highlight">Portfolio</span></h1>
+        </center>
+    </section>
+    <section class="container" style="min-height: 100vh;">
+        <div style="display: flex;align-items: center;flex-direction: column;justify-content: center;">
+            <h1 class="text-center">เมนู</h1>
+            <div style="display: flex;justify-content: space-between;gap: 10px;margin-top: 20px;">
+                <a href="#profile" class="menu-btn">โปรไฟล์</a>
+                <a href="/projects.html" class="menu-btn">ผลงาน</a>
+                <a href="#secretkub" class="menu-btn">????</a>
+            </div>
+        </div>
+    </section>
+    <section id="profile" style="min-height: 100vh;" class="container sec-bg">
+        <!-- Menu จร้า -->
+
+
+        <div style="margin-top: 10rem;" class="rows">
+            <div class="rows-item">
+                <div class="profile-container">
+                    <img src="/img/profile.png" class="profile" width="300" alt="MyImage">
+                    <span class="profile-badge ">🟢 Online</span>
+                </div>
+            </div>
+            <div class="rows-item">
+                <div class="card">
+                    <h1>Pro<span class="highlight">file</span></h1>
+                    <p class="sub-text">ประวัติ<span class="highlight">ส่วนตัว</span></p>
+                    <hr>
+                    <div style="display: flex;justify-content: space-between;">
+                        <div>
+                            <h3>ประวัติ</h3>
+                            <ul id="list_per">
+                                <li id="name">ชื่อจริง : </li>
+                                <li id="nickname">ชื่อเล่น : </li>
+                                <li id="age">อายุ : </li>
+                            </ul>
+                            <h3>งานอดิเรก</h3>
+                            <ol id="hobby">
+                            </ol>
+                        </div>
+                        <div>
+                            <h3>อาหารที่ชอบ</h3>
+                            <ol id="favoriteFood">
+                            </ol>
+                            <h3>ช่องทางติดต่อ</h3>
+                            <ol id="contact">
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="secretkub" style="min-height: 100vh;" class="container">
+        <!-- Menu จร้า -->
+        <h1 class="text-center">?????</h1>
+        <div style="margin-top: 10rem;">
+            <center>
+                <a href="/quiz.html" id="xxx"  onmouseover="c(this)" onmouseout="D_c(this)" class="big-btn text-center" style="margin-top: 10rem;">Click Here</a>
+            </center>
+        </div>
+    </section>
+    <footer>
+        <center>
+            Footer na ja. Make By <a style="color: skyblue;" href="https://github.com/bonusofficial">@bonusofficial💖 <span style="color: orange;">KMITL</span></a>
+        </center>
+    </footer>
     <script src="/script.js"></script>
 </body>
 </html>
