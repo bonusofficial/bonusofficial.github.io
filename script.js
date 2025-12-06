@@ -66,6 +66,13 @@ function c(e) {
     e.style.backgroundColor = "red";
 }
 function D_c(e) {
-    e.innerHTML = "Click Here"
-    e.style.backgroundColor = "skyblue";
 }
+const secret = document.getElementById("xxx");
+secret.addEventListener('mouseover', () => {
+    secret.innerHTML = "อะไรกันนะ😚"
+    secret.style.backgroundColor = "red";
+});
+secret.addEventListener('mouseout', () => {
+    secret.innerHTML = "Click Here"
+    secret.style.backgroundColor = "skyblue";
+});
